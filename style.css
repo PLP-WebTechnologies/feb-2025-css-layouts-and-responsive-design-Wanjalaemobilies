@@ -1,0 +1,116 @@
+
+  /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation Bar */
+nav {
+    background-color:green;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: green;
+    border-radius: 4px;
+}
+
+/* Main Content Layout (using Flexbox) */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.content {
+    flex: 1 1 45%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+.content h1, .content h2 {
+    margin-bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile devices (small screens) */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        flex: 1 1 90%; /* Make content take up more space on mobile */
+        margin: 10px 0;
+    }
+}
+
+/* Tablets (medium screens) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .content {
+        flex: 1 1 45%; /* Still 2 columns */
+    }
+}
+
+/* Desktops (large screens) */
+@media (min-width: 1025px) {
+    nav ul {
+        justify-content: space-between;
+    }
+
+    .content {
+        flex: 1 1 30%; /* 3 columns on larger screens */
+    }
+    #h{
+        table-layout: auto;
+        border: 10px;
+        
+    }
+}
+        
